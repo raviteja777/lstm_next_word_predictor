@@ -52,9 +52,8 @@ public class DataProcessor implements Serializable {
 
     //set keras tokenizer
     public KerasTokenizer initTokenizer(){
-        int numWords = corpus.size();
         String[] texts = corpus.toArray(new String[numWords]);
-        tokenizer = new KerasTokenizer(numWords);
+        tokenizer = new KerasTokenizer();
         tokenizer.fitOnTexts(texts);
         return tokenizer;
     }
