@@ -33,7 +33,7 @@ public class LSTMConfigGenerator {
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
                 .list()
                 .layer(new EmbeddingSequenceLayer.Builder()
-                        .nIn(numInputs)
+                        .nIn(numInputs+1)
                         .nOut(lstmLayerSize)
                         .activation(Activation.RELU)
                         .weightInit(WeightInit.XAVIER)
